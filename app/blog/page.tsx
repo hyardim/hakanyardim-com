@@ -2,19 +2,13 @@ import Link from "next/link";
 
 const POSTS = [
   {
+    slug: "winners-curse",
     title: "The Winner’s Curse: Why Winning an Auction Might Be Your Biggest Mistake",
     excerpt: "Unraveling the game theory myth of why winning a bidding process could actually guarantee a negative expected profit.",
     date: "2026-03-07",
     readTime: "7 min read",
     tags: ["Game Theory", "Probability", "Python"],
   },
-  {
-    title: "Building a Bento Grid Portfolio with Next.js",
-    excerpt: "How I designed and built this portfolio using a bento-style layout with Tailwind CSS and Next.js static export.",
-    date: "2026-02-19",
-    readTime: "5 min read",
-    tags: ["Next.js", "Tailwind", "Design"],
-  }
 ];
 
 function formatDate(dateStr: string) {
@@ -54,9 +48,9 @@ export default function BlogPage() {
         {/* Posts list */}
         <div className="space-y-2">
           {POSTS.map((post, i) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`}>
             <article
-              key={post.title}
-              className="animate-fade-up group rounded-2xl border border-white/[0.05] bg-neutral-900/30 p-6 transition-all duration-500 hover:border-emerald-500/20 hover:bg-neutral-900/60 hover:shadow-lg hover:shadow-emerald-500/[0.03]"
+              className="animate-fade-up group rounded-2xl border border-white/[0.05] bg-neutral-900/30 p-6 transition-all duration-500 hover:border-emerald-500/20 hover:bg-neutral-900/60 hover:shadow-lg hover:shadow-emerald-500/[0.03] cursor-pointer"
               style={{ "--delay": `${100 + i * 80}ms` } as React.CSSProperties}
             >
               {/* Date + read time */}
@@ -90,6 +84,7 @@ export default function BlogPage() {
                 ))}
               </div>
             </article>
+            </Link>
           ))}
         </div>
 

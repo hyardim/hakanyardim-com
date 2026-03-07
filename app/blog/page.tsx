@@ -14,28 +14,7 @@ const POSTS = [
     date: "2026-02-19",
     readTime: "5 min read",
     tags: ["Next.js", "Tailwind", "Design"],
-  },
-  {
-    title: "My LeetCode Journey: From Zero to 142 Problems",
-    excerpt: "Lessons learned, patterns recognized, and strategies that helped me improve my problem-solving skills.",
-    date: "2026-01-15",
-    readTime: "8 min read",
-    tags: ["DSA", "LeetCode", "Career"],
-  },
-  {
-    title: "Understanding System Design Fundamentals",
-    excerpt: "A beginner-friendly breakdown of load balancers, caching, databases, and how they work together.",
-    date: "2025-12-10",
-    readTime: "12 min read",
-    tags: ["System Design", "Backend"],
-  },
-  {
-    title: "TypeScript Tips I Wish I Knew Earlier",
-    excerpt: "Practical TypeScript patterns that make your code safer and more expressive without over-engineering.",
-    date: "2025-11-20",
-    readTime: "6 min read",
-    tags: ["TypeScript", "Web Dev"],
-  },
+  }
 ];
 
 function formatDate(dateStr: string) {
